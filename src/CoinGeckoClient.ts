@@ -32,19 +32,22 @@ import {
  * The wrap client to access all api on coin gecko
  */
 export class CoinGeckoClient {
-  apiV3Url = "https://api.coingecko.com/api/v3";
+  apiV3Url = "https://pro-api.coingecko.com/api/v3";
 
   options: Options = {
     timeout: 30000,
     autoRetry: true,
   };
 
+  apiKey = "";
+
   /**
    * Constructor
    * @param options the options passed for client library, at the moment only timeout are support
    */
-  constructor(options?: Options) {
+  constructor(apiKey: string, options?: Options) {
     this.options = { ...this.options, ...options };
+    this.apiKey = apiKey;
   }
 
   private withPathParams(
@@ -134,7 +137,7 @@ export class CoinGeckoClient {
       .join("&");
     const requestUrl = `${
       this.apiV3Url + this.withPathParams(action, params)
-    }?${qs}`;
+    }?${qs}&${this.apiKey}`;
     const res = await this.httpGet<T>(requestUrl); // await this.http.get<T>(requestUrl);
     if (res.statusCode === 429 && this.options.autoRetry) {
       // console.warn("retrying........", requestUrl, res.headers);

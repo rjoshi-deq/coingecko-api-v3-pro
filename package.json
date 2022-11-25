@@ -1,6 +1,6 @@
 {
-  "name": "coingecko-api-v3",
-  "version": "0.0.15",
+  "name": "coingecko-api-v3-pro",
+  "version": "0.0.2",
   "description": "The nodejs api library for accessing coingecko api v3 , develop with typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,10 +15,6 @@
     "prepare": "husky install",
     "release": "standard-version"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samuraitruong/coingecko-api-v3.git"
-  },
   "keywords": [
     "coingecko",
     "api",
@@ -27,9 +23,9 @@
   "author": "samuraitruong@hotmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samuraitruong/coingecko-api-v3/issues"
+    "url": "https://github.com/rjoshi-deq/coingecko-api-v3-pro/issues"
   },
-  "homepage": "https://samuraitruong.github.io/coingecko-api-v3",
+  "homepage": "https://github.com/rjoshi-deq/coingecko-api-v3-pro",
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
@@ -56,6 +52,7 @@
     "*.ts": "eslint --cache --fix"
   },
   "dependencies": {
+    "coingecko-api-v3": "^0.0.15",
     "https": "^1.0.0"
   },
   "packageManager": "yarn@3.2.4"

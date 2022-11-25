@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import { CoinGeckoClient } from "./CoinGeckoClient";
 
-const client = new CoinGeckoClient();
+const client = new CoinGeckoClient("");
 jest.setTimeout(60000);
 describe("CoinGeckoClient test", () => {
   it("ping should successful", async () => {

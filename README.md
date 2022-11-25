@@ -17,8 +17,8 @@ npm install coingecko-api-v3
 ```
 
 ```js
-import { CoinGeckoClient } from 'coingecko-api-v3';
-const client = new CoinGeckoClient({
+import { CoinGeckoClient } from 'coingecko-api-v3-pro';
+const client = new CoinGeckoClient(apiKey,{
   timeout: 10000,
   autoRetry: true,
 });
@@ -73,6 +73,3 @@ const trendingSearch = await client.trending();
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | /global/decentralized_finance_defi                         |                client.globalDefi() |   ✅    |
 
-
-## Development
-e
